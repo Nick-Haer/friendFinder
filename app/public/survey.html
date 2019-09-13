@@ -194,7 +194,7 @@
                   </button>
                 </div>
                 <div id="modalText" class="modal-body">
-                  ...
+                  <img id="monCheri" src="" alt="" srcset="">
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -225,8 +225,8 @@
 
         <script type="text/javascript">
     
-            $("#submitAll").on("submit", function (event) {
-                event.preventDefault()
+            $("#submitAll").on("click", function (event) {
+                // event.preventDefault()
                 let aPerson = {}
                 let preferencesArray = []
                 aPerson.name = ($("#nameInput").val().trim())
@@ -241,14 +241,16 @@
                 preferencesArray.push($("#questionEight").val().trim())
                 preferencesArray.push($("#questionNine").val().trim())
                 preferencesArray.push($("#questionTen").val().trim())
-                console.log(preferencesArray)
-                aPerson.prefences = preferencesArray
+                // console.log(preferencesArray)
+                aPerson.preferences = preferencesArray
 
                 
 
 
                 $.post(`/api/friends`, aPerson).then(function(data) {
                     console.log(data)
+                    $("#matchFound").text(data.name)
+                    $("#monCheri").attr("src", data.photo)
                 })
         
             })
