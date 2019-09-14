@@ -2,12 +2,12 @@ const express = require(`express`)
 
 const app = express()
 
-const PORT = procees.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 const path = require(`path`)
 
-const htmlRoutes = require("./routing/htmlRoutes")
-const apiRoutes = require("./routing/apiRoutes").router
+const htmlRoutes = require("./app/routing/htmlRoutes")
+const apiRoutes = require("./app/routing/apiRoutes").router
 
 // console.log(apiRoutes)
 
