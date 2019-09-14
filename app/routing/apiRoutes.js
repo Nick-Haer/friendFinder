@@ -14,7 +14,7 @@ app.use(express.json());
 
 router.get(`/`, function (req, res) {
     console.log("working")
-    res.send(`electric boogaloo pt.2`)
+    res.jsonu(people)
 })
 
 
