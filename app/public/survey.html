@@ -188,13 +188,13 @@
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="matchFound">Here's Your Match!</h5>
+                  <h5 class="modal-title" id="matchFound">You're the first, but be patient, love is in the air!</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
                 <div id="modalText" class="modal-body">
-                  <img id="monCheri" src="" alt="Looks like your match didn't have a photo. Maybe they have a good personality." srcset="">
+                  <img id="monCheri" height="250px" width="250px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO4OQHVVcfphuD4nZFKjFdvCDJZ2cQOvA7twqkJKj9RkFbqAcu" alt="Looks like your match didn't have a photo. Maybe they have a good personality." srcset="">
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -252,11 +252,7 @@
                     if (data) {
                     $("#matchFound").text(data.name)
                     $("#monCheri").attr("src", data.photo)
-                    } else {
-                        $("#matchFound").text("You're the first, but have some patience and wait for the magic to happen!")
-                        $("#monCheri").attr("src", "http://media.heartvectors.com/full/thumbs/free-vector-swirls-hearts.m.jpg")                    
                     }
-
                 })
         
             })
