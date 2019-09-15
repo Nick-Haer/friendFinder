@@ -249,8 +249,14 @@
 
                 $.post(`/api/friends`, aPerson).then(function(data) {
                     console.log(data)
+                    if (data) {
                     $("#matchFound").text(data.name)
                     $("#monCheri").attr("src", data.photo)
+                    } else {
+                        $("#matchFound").text("You're the first, but have some patience and wait for the magic to happen!")
+                        $("#monCheri").attr("src", "http://media.heartvectors.com/full/thumbs/free-vector-swirls-hearts.m.jpg")                    
+                    }
+
                 })
         
             })
